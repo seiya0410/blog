@@ -1,18 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import PostPage from "./pages/PostPage";
-import CreatePostPage from "./pages/CreatePostPage";
-import PostListPage from "./pages/PostListPage";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import PostPage from './pages/PostPage';
+import CreatePostPage from './pages/CreatePostPage';
+import PostListPage from './pages/PostListPage';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/create-post" element={<CreatePostPage />} />
-        <Route path="/posts" element={<PostListPage />} />
-        <Route path="/post/:id" element={<PostPage />} />
+        <Route path="post/:id" element={<PostPage />} />
+        <Route path="create" element={<CreatePostPage />} />
+        <Route path="posts" element={<PostListPage />} />
       </Routes>
     </Router>
   );

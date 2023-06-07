@@ -7,7 +7,7 @@ function PostPage() {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const response = await fetch(`https://your-worker-url.workers.dev/${id}`);
+      const response = await fetch(`https://kv.seiyalife.xyz/${id}`);
       const postData = await response.json();
       setPost(postData);
     };
